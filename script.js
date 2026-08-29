@@ -38,6 +38,17 @@ function playWord() {
     word.lang = "es-ES";
 
     speechSynthesis.speak(word);
+    /* =========================
+   LEVEL NAVIGATION
+========================= */
+
+function openLevel(level) {
+
+    localStorage.setItem("selectedLevel", level);
+
+    window.location.href = "lessons.html";
+
+}
     
 }
 ```
