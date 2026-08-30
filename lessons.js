@@ -150,4 +150,189 @@ function openLesson(lessonNumber) {
     );
 
 }
+/* =========================================
+   LESSON SEARCH & FILTER
+========================================= */
+
+function filterLessons() {
+
+    const searchInput =
+        document.getElementById("lessonSearch");
+
+    const filterInput =
+        document.getElementById("lessonFilter");
+
+    if (!searchInput || !filterInput) {
+        return;
+    }
+
+    const search =
+        searchInput.value.toLowerCase();
+
+    const filter =
+        filterInput.value;
+
+
+    const lessons =
+        document.querySelectorAll(".lesson-item");
+
+
+    lessons.forEach(function (lesson) {
+
+        const lessonText =
+            lesson.textContent.toLowerCase();
+
+        const isCompleted =
+            lesson.classList.contains("completed");
+
+
+        let matchesSearch =
+            lessonText.includes(search);
+
+        let matchesFilter = true;
+
+
+        if (filter === "completed") {
+
+            matchesFilter = isCompleted;
+
+        }
+
+
+        if (filter === "available") {
+
+            matchesFilter = !isCompleted;
+
+        }
+
+
+        if (
+            matchesSearch &&
+            matchesFilter
+        ) {
+
+            lesson.style.display = "flex";
+
+        } else {
+
+            lesson.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================================
+   MARK LESSON AS COMPLETED
+========================================= */
+
+function completeLesson(lessonNumber) {
+
+    const progressKey =
+        `holaLearnProgress_${selectedLevel}`;
+
+
+    let completed =
+        Number(
+            localStorage.getItem(progressKey)
+        ) || 0;
+
+
+    if (lessonNumber > completed) {
+
+        localStorage.setItem(
+            progressKey,
+            lessonNumber
+        );
+
+    }
+
+
+    updateLessonProgress();
+
+}
+
+
+/* =========================================
+   UPDATE PROGRESS
+========================================= */
+
+function updateLessonProgress() {
+
+    const progressKey =
+        `holaLearnProgress_${selectedLevel}`;
+
+
+    const completed =
+        Number(
+            localStorage.getItem(progressKey)
+        ) || 0;
+
+
+    const percentage =
+        Math.round(
+            (completed /
+                currentLevel.totalLessons) * 100
+        );
+
+
+    const progressText =
+        document.getElementById("progressText");
+
+
+    const progressBar =
+        document.getElementById("progressBar");
+
+
+    if (progressText) {
+
+        progressText.textContent =
+            `${percentage}%`;
+
+    }
+
+
+    if (progressBar) {
+
+        progressBar.style.width =
+            `${percentage}%`;
+
+    }
+
+
+    const lessons =
+        document.querySelectorAll(".lesson-item");
+
+
+    lessons.forEach(function (lesson, index) {
+
+        const lessonNumber =
+            index + 1;
+
+
+        if (lessonNumber <= completed) {
+
+            lesson.classList.add("completed");
+
+        }
+
+    });
+
+}
+
+
+/* =========================================
+   LOAD SAVED PROGRESS
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        updateLessonProgress();
+
+    }
+);
 
