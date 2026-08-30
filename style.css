@@ -1400,3 +1400,131 @@ footer p {
     }
 
 }
+/* =========================================
+   LESSON TOOLS
+========================================= */
+
+.lesson-tools {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.lesson-tools input {
+
+    flex: 1;
+
+    padding: 13px 16px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.lesson-tools input:focus {
+
+    border-color: #e63946;
+
+}
+
+
+.lesson-tools select {
+
+    padding: 13px 16px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 9px;
+
+    background: white;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   LEARNING TIP
+========================================= */
+
+.lesson-tip {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #fff8e8;
+
+    border: 1px solid #f2e5c5;
+
+    border-radius: 14px;
+
+}
+
+
+.lesson-tip > span {
+
+    font-size: 25px;
+
+}
+
+
+.lesson-tip strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+}
+
+
+.lesson-tip p {
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin: 0;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .lesson-tools {
+
+        flex-direction: column;
+
+    }
+
+    .lesson-tools input,
+    .lesson-tools select {
+
+        width: 100%;
+
+    }
+
+}
