@@ -884,3 +884,203 @@ footer p {
 }
 
 }
+/* =========================================
+   SPANISH LEVELS
+========================================= */
+
+.spanish-levels {
+    padding: 100px 8%;
+    background: #f8f8f8;
+}
+
+.levels-title {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.levels-title p {
+    color: #e63946;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.levels-title h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.levels-title span {
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* LEVEL GRID */
+
+.level-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* LEVEL CARD */
+
+.spanish-level-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e8e8e8;
+
+    transition: 0.3s ease;
+}
+
+.spanish-level-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* CARD TOP */
+
+.level-card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.level-tag {
+    background: #fff0f0;
+
+    color: #e63946;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+.level-emoji {
+    font-size: 30px;
+}
+
+
+/* TEXT */
+
+.spanish-level-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.spanish-level-card p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    min-height: 70px;
+}
+
+
+/* LESSON COUNT */
+
+.level-details {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    margin: 22px 0;
+}
+
+.level-details strong {
+    font-size: 28px;
+}
+
+.level-details span {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* BUTTON */
+
+.spanish-level-card button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #e63946;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.spanish-level-card button:hover {
+    transform: translateY(-2px);
+
+    background: #d62839;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .level-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .spanish-levels {
+        padding: 70px 6%;
+    }
+
+    .levels-title h2 {
+        font-size: 32px;
+    }
+
+    .level-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
