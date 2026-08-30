@@ -66,6 +66,64 @@
 
 
 <script src="lessons.js"></script>
+    <!-- =========================================
+     LESSON FILTER + SEARCH
+========================================= -->
+
+<div class="lesson-tools">
+
+    <input
+        type="text"
+        id="lessonSearch"
+        placeholder="Search lessons..."
+        oninput="filterLessons()"
+    >
+
+    <select
+        id="lessonFilter"
+        onchange="filterLessons()">
+
+        <option value="all">
+            All Lessons
+        </option>
+
+        <option value="available">
+            Available
+        </option>
+
+        <option value="completed">
+            Completed
+        </option>
+
+    </select>
+
+</div>
+
+
+<!-- =========================================
+     LESSON CONTENT AREA
+========================================= -->
+
+<div id="lessonExtraContent">
+
+    <div class="lesson-tip">
+
+        <span>💡</span>
+
+        <div>
+
+            <strong>Learning tip</strong>
+
+            <p>
+                Complete each lesson in order.
+                Practice what you learn before moving forward.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 
