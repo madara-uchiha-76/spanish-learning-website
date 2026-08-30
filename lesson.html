@@ -423,7 +423,21 @@
 
 
     <script src="lesson.js"></script>
+<script>
+    const selectedLevel =
+        localStorage.getItem("selectedSpanishLevel") || "A1";
 
+    const selectedLesson =
+        Number(localStorage.getItem("selectedLesson")) || 1;
+
+    const lessonLabel =
+        document.querySelector(".lesson-level-label");
+
+    if (lessonLabel) {
+        lessonLabel.textContent =
+            `${selectedLevel} • LESSON ${String(selectedLesson).padStart(2, "0")}`;
+    }
+</script>
 </body>
 
 </html>
