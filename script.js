@@ -62,3 +62,17 @@ function showPracticeMessage() {
     );
 
 }
+/* =========================================
+   SPANISH LEVEL SELECTION
+========================================= */
+
+function openSpanishLevel(level) {
+
+    localStorage.setItem(
+        "selectedSpanishLevel",
+        level
+    );
+
+    window.location.href = "lessons.html";
+
+}
