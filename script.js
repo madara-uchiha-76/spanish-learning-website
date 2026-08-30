@@ -1,45 +1,18 @@
-```javascript
-function startLearning() {
+/* =========================
+   SCROLL TO LEARN
+========================= */
+
+function goToLearn() {
+
     document.getElementById("learn").scrollIntoView({
         behavior: "smooth"
     });
+
 }
 
 
-function showDemo() {
-    alert(
-        "Welcome to HolaLearn! 🇪🇸\n\n" +
-        "You can learn Vocabulary, Grammar, " +
-        "Pronunciation and Conversation."
-    );
-}
-
-
-function openLesson(lesson) {
-    alert(
-        "You selected: " + lesson + "\n\n" +
-        "This lesson section will be added in the next part!"
-    );
-}
-
-
-function startPractice() {
-    alert(
-        "Practice section coming soon! 📝\n\n" +
-        "We will build interactive Spanish exercises here."
-    );
-}
-
-
-function playWord() {
-
-    const word = new SpeechSynthesisUtterance("Hola");
-
-    word.lang = "es-ES";
-
-    speechSynthesis.speak(word);
-    /* =========================
-   LEVEL NAVIGATION
+/* =========================
+   OPEN LEVEL
 ========================= */
 
 function openLevel(level) {
@@ -49,6 +22,43 @@ function openLevel(level) {
     window.location.href = "lessons.html";
 
 }
-    
+
+
+/* =========================
+   SPANISH SPEECH
+========================= */
+
+function speakSpanish(text) {
+
+    if ("speechSynthesis" in window) {
+
+        const speech =
+            new SpeechSynthesisUtterance(text);
+
+        speech.lang = "es-ES";
+
+        speech.rate = 0.85;
+
+        window.speechSynthesis.speak(speech);
+
+    } else {
+
+        alert("Your browser does not support pronunciation.");
+
+    }
+
 }
-```
+
+
+/* =========================
+   PRACTICE
+========================= */
+
+function showPracticeMessage() {
+
+    alert(
+        "Practice section is coming next! 🇪🇸\n\n" +
+        "We will add exercises, translations and tests."
+    );
+
+}
