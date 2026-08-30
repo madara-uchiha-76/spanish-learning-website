@@ -717,5 +717,170 @@ footer p {
     .practice-section h2 {
         font-size: 42px;
     }
+    /* =========================
+   LESSONS PAGE
+========================= */
+
+.lessons-page {
+    min-height: 100vh;
+
+    padding: 80px 7%;
+
+    background: #fffdf9;
+}
+
+.lessons-header {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.lessons-header > span {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background: #fff0f0;
+
+    color: #e63946;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.lessons-header h1 {
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+.lessons-header p {
+    color: #777;
+}
+
+.lessons-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.lesson-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 24px;
+
+    background: white;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.lesson-card:hover {
+    transform: translateX(6px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.lesson-number {
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff0f0;
+
+    color: #e63946;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+.lesson-content {
+    flex: 1;
+}
+
+.lesson-content span {
+    color: #e63946;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.lesson-content h3 {
+    margin: 5px 0;
+
+    font-size: 18px;
+}
+
+.lesson-content p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+.lesson-card button {
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    background: #e63946;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .lessons-page {
+        padding: 60px 5%;
+    }
+
+    .lessons-header h1 {
+        font-size: 34px;
+    }
+
+    .lesson-card {
+        padding: 15px;
+    }
+
+    .lesson-number {
+        width: 42px;
+        height: 42px;
+    }
+
+}
 
 }
