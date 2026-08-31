@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HolaLearn - Learn Spanish</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Hola<span>Learn</span>
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#learn">Learn</a>
+
+            <a href="#practice">Practice</a>
+
+            <a href="#about">About</a>
+
+        </nav>
+
+        <button
+            class="nav-button"
+            onclick="startLearning()">
+
+            Start Learning
+
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="home"
+             class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                🇪🇸 LEARN SPANISH
+            </p>
+
+            <h1>
+                Spanish made
+                <span>simple.</span>
+            </h1>
+
+            <p class="hero-description">
+
+                Learn Spanish step by step with
+                interactive lessons, vocabulary,
+                pronunciation, grammar and practice.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-button"
+                    onclick="startLearning()">
+
+                    Start Learning →
+
+                </button>
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToLevels()">
+
+                    Explore Levels
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO CARD -->
+
+        <div class="hero-learning-card">
+
+            <div class="hero-icon">
+                🇪🇸
+            </div>
+
+            <p class="card-label">
+                YOUR SPANISH JOURNEY
+            </p>
+
+            <h2>
+                ¡Hola!
+            </h2>
+
+            <p class="card-description">
+                Start your Spanish journey today.
+            </p>
+
+            <div class="mini-progress">
+
+                <div class="progress-top">
+
+                    <span>
+                        Spanish Path
+                    </span>
+
+                    <span>
+                        A1 → B2
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div></div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-word">
+
+                <div>
+
+                    <strong>
+                        Hola
+                    </strong>
+
+                    <small>
+                        Hello
+                    </small>
+
+                </div>
+
+                <button
+                    onclick="speakSpanish('Hola')">
+
+                    🔊
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LEVELS
+    ========================== -->
+
+    <section id="learn"
+             class="levels-section">
+
+        <div class="section-heading">
+
+            <p>
+                LEARN SPANISH
+            </p>
+
+            <h2>
+                Choose your Spanish level
+            </h2>
+
+            <span>
+                Follow your learning path from
+                A1 beginner to B2 upper-intermediate.
+            </span>
+
+        </div>
+
+
+        <div class="levels-container">
+
+
+            <!-- A1 -->
+
+            <div class="level-card">
+
+                <div class="level-header">
+
+                    <span class="level-badge">
+                        A1
+                    </span>
+
+                    <span class="level-symbol">
+                        🌱
+                    </span>
+
+                </div>
+
+                <h3>
+                    Beginner
+                </h3>
+
+                <p>
+                    Start from zero and learn
+                    the foundations of Spanish.
+                </p>
+
+                <div class="lesson-info">
+
+                    <strong>
+                        40
+                    </strong>
+
+                    <span>
+                        Lessons
+                    </span>
+
+                </div>
+
+                <button
+                    onclick="openLevel('A1')">
+
+                    Start A1 →
+
+                </button>
+
+            </div>
+
+
+            <!-- A2 -->
+
+            <div class="level-card">
+
+                <div class="level-header">
+
+                    <span class="level-badge">
+                        A2
+                    </span>
+
+                    <span class="level-symbol">
+                        📖
+                    </span>
+
+                </div>
+
+                <h3>
+                    Elementary
+                </h3>
+
+                <p>
+                    Build everyday vocabulary and
+                    communicate in common situations.
+                </p>
+
+                <div class="lesson-info">
+
+                    <strong>
+                        40
+                    </strong>
+
+                    <span>
+                        Lessons
+                    </span>
+
+                </div>
+
+                <button
+                    onclick="openLevel('A2')">
+
+                    Start A2 →
+
+                </button>
+
+            </div>
+
+
+            <!-- B1 -->
+
+            <div class="level-card">
+
+                <div class="level-header">
+
+                    <span class="level-badge">
+                        B1
+                    </span>
+
+                    <span class="level-symbol">
+                        🚀
+                    </span>
+
+                </div>
+
+                <h3>
+                    Intermediate
+                </h3>
+
+                <p>
+                    Improve conversation and understand
+                    more complex Spanish.
+                </p>
+
+                <div class="lesson-info">
+
+                    <strong>
+                        50
+                    </strong>
+
+                    <span>
+                        Lessons
+                    </span>
+
+                </div>
+
+                <button
+                    onclick="openLevel('B1')">
+
+                    Start B1 →
+
+                </button>
+
+            </div>
+
+
+            <!-- B2 -->
+
+            <div class="level-card">
+
+                <div class="level-header">
+
+                    <span class="level-badge">
+                        B2
+                    </span>
+
+                    <span class="level-symbol">
+                        🏆
+                    </span>
+
+                </div>
+
+                <h3>
+                    Upper Intermediate
+                </h3>
+
+                <p>
+                    Master advanced communication
+                    and complex Spanish structures.
+                </p>
+
+                <div class="lesson-info">
+
+                    <strong>
+                        50
+                    </strong>
+
+                    <span>
+                        Lessons
+                    </span>
+
+                </div>
+
+                <button
+                    onclick="openLevel('B2')">
+
+                    Start B2 →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section class="learning-features">
+
+        <div class="section-heading">
+
+            <p>
+                LEARNING FEATURES
+            </p>
+
+            <h2>
+                Learn Spanish from every angle.
+            </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-item">
+
+                <div>
+                    📚
+                </div>
+
+                <h3>
+                    Vocabulary
+                </h3>
+
+                <p>
+                    Learn useful Spanish words
+                    and expressions.
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div>
+                    ✍️
+                </div>
+
+                <h3>
+                    Grammar
+                </h3>
+
+                <p>
+                    Understand Spanish grammar
+                    step by step.
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div>
+                    🔊
+                </div>
+
+                <h3>
+                    Pronunciation
+                </h3>
+
+                <p>
+                    Listen and practice
+                    Spanish pronunciation.
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div>
+                    💬
+                </div>
+
+                <h3>
+                    Conversation
+                </h3>
+
+                <p>
+                    Learn useful real-life
+                    Spanish sentences.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRACTICE
+    ========================== -->
+
+    <section id="practice"
+             class="practice-section">
+
+        <div class="practice-content">
+
+            <p class="eyebrow practice-label">
+                PRACTICE
+            </p>
+
+            <h2>
+                Learn today.<br>
+                Use it tomorrow.
+            </h2>
+
+            <p>
+                Practice vocabulary, grammar,
+                translations and conversations
+                through interactive exercises.
+            </p>
+
+            <button
+                class="practice-button"
+                onclick="startPractice()">
+
+                Start Practice →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about"
+             class="about-section">
+
+        <p class="eyebrow">
+            ABOUT HOLALEARN
+        </p>
+
+        <h2>
+            A clear path to Spanish.
+        </h2>
+
+        <p>
+            HolaLearn is designed to take learners
+            from Spanish basics to confident
+            communication through structured
+            interactive learning.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="logo">
+            Hola<span>Learn</span>
+        </div>
+
+        <p>
+            Learn Spanish. Speak with confidence. 🇪🇸
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
